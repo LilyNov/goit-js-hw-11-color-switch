@@ -17,6 +17,7 @@ console.log(colors[0])
 const changeBackgroundColor = {
   getNewColorId: null,
   isActive: false,
+  
 
   start() {
 
@@ -24,6 +25,7 @@ const changeBackgroundColor = {
     return
     }   
     
+    refs.body.style.backgroundColor = '#ffffff'
     this.isActive = true;
     this.getNewColorId = setInterval(() => {
       
@@ -35,6 +37,7 @@ const changeBackgroundColor = {
 
     stop() {
       clearInterval(this.getNewColorId)
+      this.isActive = false
     }
 }
 
